@@ -28,15 +28,11 @@ public class Main {
     private static void increaseGrades(Map<String, Student> studentList) {
                 for (String key : studentList.keySet()) {
             Student student = studentList.get(key);
-
-            // Get current grade
             int currentGrade = student.getGrade();
 
-            // Increase by 10%
             double increaseRate = 1.10;
             double updatedGrade = increaseRate * currentGrade;
 
-            // Update the student's grade
             student.setGrade((int) updatedGrade);
 
             System.out.println(student);
